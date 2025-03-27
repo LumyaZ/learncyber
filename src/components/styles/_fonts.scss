@@ -1,0 +1,14 @@
+// Temporairement commenté jusqu'à ce que nous ayons les fichiers de la police
+/*
+@font-face {
+  font-family: 'MORTEND';
+  src: url('../assets/fonts/MORTEND.woff2') format('woff2'),
+       url('../assets/fonts/MORTEND.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+*/
+
+// Utilisation d'une police de secours en attendant
+$font-primary: 'Impact', 'Arial Black', sans-serif; 

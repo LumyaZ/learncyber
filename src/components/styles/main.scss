@@ -1,0 +1,144 @@
+// Import des variables et polices
+@import './variables';
+@import './fonts';
+
+// Variables
+$primary-color: #0091BF;
+$secondary-color: #5000FF;
+$black-color: #000000;
+$background-color: #ffffff;
+$text-color: $black-color;
+
+// Fonts
+$font-secondary: 'Poppins', sans-serif;
+
+// Reset et styles de base
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-secondary;
+  line-height: 1.6;
+  color: $text-color;
+  background-color: $background-color;
+  overflow-x: hidden;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: $primary-color;
+  padding: 1rem;
+  color: white;
+  font-family: $font-primary;
+}
+
+main {
+  width: 100%;
+}
+
+footer {
+  background-color: $secondary-color;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-family: $font-primary;
+}
+
+// Styles de la page d'accueil
+.home {
+  text-align: center;
+  padding: 2rem;
+  
+  h1 {
+    font-family: $font-primary;
+    color: $primary-color;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  p {
+    font-family: $font-secondary;
+    font-size: 1.2rem;
+    color: $text-color;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// Section Héro
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: none;
+  color: white;
+  padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    text-align: center;
+    max-width: 800px;
+    z-index: 1;
+  }
+
+  &__title {
+    font-family: $font-primary;
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  &__cta {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: $secondary-color;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: $transition-default;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba($secondary-color, 0.3);
+    }
+  }
+}
+
+// Media queries
+@media (max-width: $mobile) {
+  .hero {
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    &__subtitle {
+      font-size: 1.2rem;
+    }
+  }
+} 

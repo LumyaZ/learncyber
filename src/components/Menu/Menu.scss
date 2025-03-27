@@ -1,0 +1,134 @@
+@import '../styles/variables';
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: none;
+  backdrop-filter: none;
+  transition: background-color 0.1s ease;
+
+  &__logo img {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Ensure the height matches for a perfect circle */
+    border-radius: 50%; /* Makes the logo rounded */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
+
+  &__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    z-index: 1001;
+
+    span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px 0;
+      transition: all 0.3s ease;
+    }
+
+    &.open {
+      span {
+        &:first-child {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          transform: rotate(-45deg) translate(7px, -7px);
+        }
+      }
+    }
+  }
+
+  &__items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+    z-index: 1000;
+
+    li {
+      a {
+        color: white;
+        text-decoration: none;
+        font-family: $font-secondary;
+        font-weight: 500;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: rgba(white, 0.8);
+        }
+      }
+    }
+  }
+
+  &--scrolled {
+    background-color: $primary-color;
+  }
+
+  &__items.open {
+    right: 0;
+  }
+
+  &__overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    transition: opacity 0.3s ease;
+  }
+
+  &__overlay.open {
+    display: block;
+  }
+}
+
+// Media queries pour le responsive
+@media (max-width: 768px) {
+  .menu {
+    &__toggle {
+      display: block;
+    }
+
+    &__items {
+      position: fixed;
+      top: 0;
+      right: -60%;
+      height: 100vh;
+      width: 60%;
+      background-color: $primary-color;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: right 0.3s ease;
+      padding: 2rem;
+
+      &.open {
+        right: 0;
+      }
+
+      li {
+        margin: 1rem 0;
+      }
+    }
+  }
+} 
