@@ -1,133 +1,221 @@
 @import '../styles/variables';
 
 .modules {
-  height: 100vh;
-  background-color: $primary-color;
-  padding: 4rem 2rem;
+  padding: 80px 20px;
+  background-color: $background-color;
 
   &__title {
     font-family: $font-primary;
     font-size: 2.5rem;
-    color: white;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 60px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-align: center;
-    margin-bottom: 3rem;
   }
 
-  &__slider {
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__item {
-    width: 80%;
-    height: 80%;
+  &__container {
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    background: white;
+    gap: 40px;
+  }
+
+  &__nav {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__nav-button {
+    background: none;
+    border: 2px solid transparent;
+    padding: 20px;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    height: 400px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
     &:hover {
-      transform: translateY(-5px);
+      background-color: rgba($primary-color, 0.05);
     }
 
-    &.text-left {
-      flex-direction: row-reverse;
+    &.active {
+      border-color: $primary-color;
+      background-color: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
   }
 
-  &__image {
-    width: 50%;
-    height: 100%;
+  &__nav-title {
+    font-family: $font-primary;
+    font-size: 1.1rem;
+    color: $text-color;
+    font-weight: 500;
+  }
+
+  &__nav-status {
+    font-family: $font-secondary;
+    font-size: 0.9rem;
+    color: $primary-color;
+  }
+
+  &__content {
+    flex: 1;
+    min-height: 500px;
+  }
+
+  &__card {
+    background: white;
+    border-radius: 15px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    animation: fadeIn 0.3s ease;
+  }
+
+  &__card-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.3s ease;
-    }
 
-    &:hover img {
-      transform: scale(1.05);
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 
-  &__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 65%;
-    padding: 2rem;
-    text-align: left;
-    background-color: white;
+  &__card-content {
+    padding: 30px;
   }
 
-  &__name {
+  &__card-title {
     font-family: $font-primary;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     color: $primary-color;
-    margin-bottom: 0.5rem;
+    margin-bottom: 15px;
   }
 
-  &__description {
+  &__card-description {
     font-family: $font-secondary;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: $text-color;
+    margin-bottom: 20px;
+    line-height: 1.6;
   }
 
-  &__status {
-    font-family: $font-secondary;
-    font-size: 1rem;
-    color: $text-color;
-  }
-
-  // Styles for Swiper navigation buttons
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: $primary-color;
-    background: white;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-    &:after {
-      font-size: 1.2rem;
+  &__card-details {
+    p {
+      font-family: $font-secondary;
+      font-size: 1rem;
+      color: $text-color;
+      opacity: 0.8;
+      line-height: 1.6;
+      margin-bottom: 20px;
     }
   }
 
-  // Styles for Swiper pagination
-  .swiper-pagination-bullet {
-    background: $primary-color;
-    opacity: 0.5;
+  &__card-status {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: $primary-color;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-family: $font-secondary;
+  }
 
-    &-active {
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
       opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: $tablet) {
+    padding: 60px 20px;
+
+    &__container {
+      flex-direction: column;
+    }
+
+    &__nav {
+      flex: none;
+      width: 100%;
+    }
+
+    &__nav-button {
+      padding: 15px;
+    }
+
+    &__card {
+      min-height: auto;
+    }
+
+    &__card-image {
+      height: 200px;
+    }
+
+    &__card-content {
+      padding: 20px;
+    }
+
+    &__card-title {
+      font-size: 1.5rem;
+    }
+
+    &__card-description {
+      font-size: 1rem;
     }
   }
 
   @media (max-width: $mobile) {
-    padding: 3rem 1rem;
+    padding: 40px 15px;
 
     &__title {
       font-size: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 40px;
     }
 
-    &__image {
-      height: 250px;
+    &__nav-button {
+      padding: 12px;
+    }
+
+    &__nav-title {
+      font-size: 1rem;
+    }
+
+    &__card-image {
+      height: 180px;
+    }
+
+    &__card-title {
+      font-size: 1.3rem;
+    }
+
+    &__card-description {
+      font-size: 0.9rem;
+    }
+
+    &__card-details {
+      p {
+        font-size: 0.9rem;
+      }
     }
   }
 } 
