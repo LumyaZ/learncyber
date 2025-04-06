@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './History.scss';
 
 const History = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [hasBeenVisible, setHasBeenVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Si l'élément est visible dans le viewport
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          setHasBeenVisible(true);
+        } else if (hasBeenVisible) {
+          // Si l'élément a déjà été visible mais ne l'est plus
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.disconnect();
+      }
+    };
+  }, [hasBeenVisible]);
+
   const timeline = [
     {
       id: 1,
@@ -41,7 +71,7 @@ const History = () => {
   ];
 
   return (
-    <section id="history" className="history">
+    <section id="history" className={`history ${isVisible ? 'is-visible' : hasBeenVisible ? 'is-hidden' : ''}`} ref={sectionRef}>
       <h2 className="history__title">Notre Histoire</h2>
       
       <div className="history__container">

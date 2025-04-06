@@ -1,0 +1,448 @@
+@import '../styles/variables';
+
+.realisations {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+
+  &__title {
+    font-family: $font-primary;
+    font-size: 2.5rem;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 2px;
+      background-color: rgba($primary-color, 0.2);
+      z-index: -1;
+    }
+  }
+
+  &__tab {
+    padding: 12px 30px;
+    margin: 0 5px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-family: $font-primary;
+    font-size: 1.2rem;
+    color: $text-color;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    
+    &:hover {
+      color: $primary-color;
+    }
+    
+    &.active {
+      color: $primary-color;
+      border-bottom-color: $primary-color;
+      font-weight: 600;
+    }
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+  }
+
+  &__card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+  }
+
+  &__content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__project-title {
+    font-family: $font-primary;
+    font-size: 1.4rem;
+    color: $text-color;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-family: $font-secondary;
+    font-size: 0.9rem;
+    color: $text-color;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-bottom: 15px;
+    flex-grow: 1;
+  }
+
+  &__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  &__tech-tag {
+    padding: 5px 12px;
+    background-color: rgba($primary-color, 0.1);
+    color: $primary-color;
+    font-family: $font-secondary;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  &__details-button {
+    margin-top: auto;
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-family: $font-primary;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba($primary-color, 0.3);
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($primary-color, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &__link {
+    padding: 10px 20px;
+    background-color: white;
+    color: $primary-color;
+    text-decoration: none;
+    font-family: $font-primary;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: $primary-color;
+      color: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  // Animation pour les changements de période
+  &__grid {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // Styles du Panneau Latéral
+  &__panel-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 50%;
+    max-width: 600px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+
+    &.open {
+      right: 0;
+    }
+  }
+
+  &__panel-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    z-index: 10;
+
+    &:hover {
+      color: #333;
+    }
+  }
+
+  &__panel-slider {
+    height: 40%;
+    background-color: #eee;
+    position: relative;
+    
+    .swiper {
+        height: 100%;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.3);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        &:after {
+            font-size: 1rem;
+        }
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: white;
+    }
+  }
+
+  &__panel-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__panel-content {
+    padding: 30px;
+    flex-grow: 1;
+    
+    h4 {
+        font-family: $font-primary;
+        font-size: 1.1rem;
+        color: $primary-color;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+  }
+
+  &__panel-title {
+    font-family: $font-primary;
+    font-size: 2rem;
+    color: $primary-color;
+    margin-bottom: 15px;
+  }
+
+  &__panel-description {
+    font-family: $font-secondary;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: $text-color;
+    margin-bottom: 20px;
+  }
+
+  &__panel-technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+
+  &__panel-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: white;
+    text-decoration: none;
+    font-family: $font-primary;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba($primary-color, 0.3);
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: $tablet) {
+    padding: 60px 0;
+
+    &__title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    &__tab {
+      padding: 10px 20px;
+      font-size: 1.1rem;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    &__project-title {
+      font-size: 1.3rem;
+    }
+
+    &__panel {
+        width: 70%;
+        max-width: none;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 40px 0;
+
+    &__title {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+    }
+
+    &__tabs {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      
+      &::after {
+        width: 150px;
+      }
+    }
+
+    &__tab {
+      width: 100%;
+      max-width: 200px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      padding: 0 15px;
+    }
+
+    &__content {
+      padding: 20px;
+    }
+
+    &__project-title {
+      font-size: 1.2rem;
+    }
+
+    &__description {
+      font-size: 0.9rem;
+    }
+    
+    &__panel {
+        width: 90%;
+        max-width: none;
+    }
+
+    &__panel-slider {
+        height: 35%;
+    }
+
+    &__panel-content {
+        padding: 20px;
+    }
+
+    &__panel-title {
+        font-size: 1.6rem;
+    }
+  }
+} 

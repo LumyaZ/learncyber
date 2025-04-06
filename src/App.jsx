@@ -9,6 +9,7 @@ import Team from './components/Team/Team';
 import Process from './components/Process/Process';
 import Testimonials from './components/Testimonials/Testimonials';
 import WorkWithUs from './components/WorkWithUs/WorkWithUs';
+import Realisations from './components/Realisations/Realisations';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Team />
         <WorkWithUs />
         <Process />
+        <Realisations />
       </main>
     </div>
   );

@@ -58,7 +58,7 @@ const Testimonials = () => {
         <div className="testimonials__scroller">
           <div className="testimonials__track">
             {companies.map((company) => (
-              <div key={company.id} className="testimonials__item">
+              <div key={company.id} className="testimonials__circle">
                 {company.hasLogo ? (
                   <img src={company.logo} alt={company.name} className="testimonials__logo" />
                 ) : (
@@ -68,7 +68,7 @@ const Testimonials = () => {
             ))}
             {/* Duplicate items for infinite scroll effect */}
             {companies.map((company) => (
-              <div key={`${company.id}-duplicate`} className="testimonials__item">
+              <div key={`${company.id}-duplicate`} className="testimonials__circle">
                 {company.hasLogo ? (
                   <img src={company.logo} alt={company.name} className="testimonials__logo" />
                 ) : (
