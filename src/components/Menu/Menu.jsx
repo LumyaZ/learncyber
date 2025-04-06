@@ -58,7 +58,7 @@ const Menu = () => {
         <li><a href="#accueil" onClick={(e) => handleLinkClick(e, 'accueil')}>Accueil</a></li>
         <li><a href="#agence" onClick={(e) => handleLinkClick(e, 'agence')}>Agence</a></li>
         <li><a href="#modules" onClick={(e) => handleLinkClick(e, 'modules')}>Modules</a></li>
-        <li><a href="#timeline-component" onClick={(e) => handleLinkClick(e, 'timeline-component')}>Historique</a></li>
+        <li><a href="#history" onClick={(e) => handleLinkClick(e, 'history')}>Historique</a></li>
         <li><a href="#team" onClick={(e) => handleLinkClick(e, 'team')}>Notre Team</a></li>
         <li><a href="#process" onClick={(e) => handleLinkClick(e, 'process')}>Process</a></li>
         <li><a href="#realisation" onClick={(e) => handleLinkClick(e, 'realisation')}>Réalisation</a></li>

@@ -7,6 +7,8 @@ import Modules from './components/Modules/Modules';
 import History from './components/History/History';
 import Team from './components/Team/Team';
 import Process from './components/Process/Process';
+import Testimonials from './components/Testimonials/Testimonials';
+import WorkWithUs from './components/WorkWithUs/WorkWithUs';
 
 function App() {
   return (
@@ -16,8 +18,10 @@ function App() {
         <Hero />
         <Agency />
         <Modules />
+        <Testimonials />
         <History />
         <Team />
+        <WorkWithUs />
         <Process />
       </main>
     </div>
