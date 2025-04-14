@@ -10,6 +10,8 @@ import Process from './components/Process/Process';
 import Testimonials from './components/Testimonials/Testimonials';
 import WorkWithUs from './components/WorkWithUs/WorkWithUs';
 import Realisations from './components/Realisations/Realisations';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <WorkWithUs />
         <Process />
         <Realisations />
+        <Contact/>
+        <Footer />
       </main>
     </div>
   );

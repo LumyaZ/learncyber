@@ -69,7 +69,7 @@ const Modules = () => {
   ];
 
   return (
-    <section className={`modules ${isVisible ? 'is-visible' : hasBeenVisible ? 'is-hidden' : ''}`} ref={sectionRef}>
+    <section id="modules" className={`modules ${isVisible ? 'is-visible' : hasBeenVisible ? 'is-hidden' : ''}`} ref={sectionRef}>
       <h1 className="modules__title">MODULES</h1>
       <div className="modules__container">
         <nav className="modules__nav">

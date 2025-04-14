@@ -58,8 +58,8 @@ const Team = () => {
     },
     {
       id: 10,
-      name: 'Thomas',
-      role: 'Product Manager'
+      name: 'Yasser',
+      role: 'Connard'
     }
   ];
 
