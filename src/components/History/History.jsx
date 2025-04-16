@@ -35,39 +35,32 @@ const History = () => {
   const timeline = [
     {
       id: 1,
-      year: '2020',
-      title: 'Création du Projet',
-      description: 'Lancement de notre initiative pour démocratiser l\'apprentissage de la cybersécurité.',
+      year: 'Novembre 2022',
+      title: 'Lancement de CyberSafe',
+      description: "A l'origine nous voulions créer un média de cybersécurité, avec des cours, des exercices, des interviews, des tutoriels, etc. Mais le projet était trop ambitieux et en voulant cibler le plus de personnes possibles, nous ne touchions pas grand monde. La partie sensibilisation était une hypothèse que nous avons fini par développé par la suite",
       position: 'left'
     },
     {
       id: 2,
-      year: '2021',
-      title: 'Développement de la Plateforme',
-      description: 'Mise en place de notre plateforme d\'apprentissage interactive et de nos premiers modules.',
+      year: 'Septembre 2023',
+      title: 'LearnCyber change de cap',
+      description: "Lancement de notre projet de sensibilisation à la cybersécurité. Élaboration de différents modules, structuration de la refonte du projet et premiers rendez-vous dans des écoles : Lycée la Salle de Lille ! Le Lycée nous a permis de faire des sessions de tests sur les étudiants en les sensibilisant à la cybersécurité. Nous avons même sensibilisé le corps enseignant et administratif du lycée ",
       position: 'right'
     },
     {
       id: 3,
-      year: '2022',
-      title: 'Expansion du Contenu',
-      description: 'Ajout de nouveaux modules et partenariats avec des experts du domaine.',
+      year: 'Juin 2024',
+      title: 'Grand gagnant du Ydays Event à Lyon',
+      description: "Né au sein du campus Ynov de Lille, notre école organise tous les ans un concours inter-campus sur l'entreprenariat. Nous nous sommes déplacés à la Banque de France pour parler de notre projet et de nos résultats : près de 600 élèves sensibilisés en 4 mois. Nous avons remporté le premier prix et obtenu une dotation de 7000€ pour le lancement officiel de notre projet.",
       position: 'left'
     },
     {
       id: 4,
-      year: '2023',
-      title: 'Certification Reconnue',
-      description: 'Obtention de certifications officielles et reconnaissance par l\'industrie.',
+      year: 'septembre 2024',
+      title: 'Ouverture de notre association',
+      description: "Depuis septembre 2024, nous avons ouvert notre association à but non lucrative et continué d'intervenir au Lycée la Salle de Lille. Maintenant nous intervenons dans d'autres établissements et montrons notre activité sur les réseaux sociaux (lien linkedin). Notre projet prend de plus en plus d'ampleur et les retours sont plus que positifs ! Nous sommes entrain de nous professionnaliser, nouvelle direction artistique, nouveaux matériels, nouveaux outils, ...",
       position: 'right'
     },
-    {
-      id: 5,
-      year: '2024',
-      title: 'Innovation Continue',
-      description: 'Introduction de nouvelles technologies et méthodes d\'apprentissage avancées.',
-      position: 'left'
-    }
   ];
 
   return (

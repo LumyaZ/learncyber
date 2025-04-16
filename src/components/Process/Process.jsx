@@ -5,23 +5,19 @@ const Process = () => {
   const steps = [
     {
       number: '1',
-      title: 'Découverte',
-      description: 'Analyse des besoins'
+      title: 'Prise de contact',
     },
     {
       number: '2',
-      title: 'Conception',
-      description: 'Élaboration stratégique'
+      title: 'Réunion cadrage',
     },
     {
       number: '3',
-      title: 'Développement',
-      description: 'Réalisation technique'
+      title: 'Première sensibilisation',
     },
     {
       number: '4',
-      title: 'Déploiement',
-      description: 'Mise en production'
+      title: 'Continuité via les modules',
     }
   ];
 

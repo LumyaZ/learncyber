@@ -37,35 +37,35 @@ const Modules = () => {
     {
       id: 0,
       title: 'Introduction',
-      description: 'Les bases de la cybersécurité',
-      content: 'Découvrez les fondamentaux de la cybersécurité, les différentes menaces et les bonnes pratiques de sécurité.',
+      description: 'Introduction à la cybersécurité',
+      content: "La cybersécurité est un mot qui peut faire peur, notre but à travers ce module est de faire prendre conscience que de simples actions peuvent vous sécuriser facilement. Cependant, il y a de plus en plus de cyberattaques et de conséquences sur les entreprises et les particuliers. C'est pourquoi nous rappelons les risques et conséquences de la négligence ou méconnaissance du public. Nous pouvons adapter notre contenu en fonction du domaine d'études ou du secteur d'activité pour sensibiliser de la meilleure des manières possibles.",
       image: '/images/modules/intro.jpg',
       status: 'Disponible'
     },
     {
       id: 1,
-      title: 'Réseaux',
-      description: 'Sécurité des réseaux',
-      content: 'Apprenez à sécuriser vos réseaux, à détecter les intrusions et à mettre en place des protections efficaces.',
+      title: 'Sensibilisation ',
+      description: 'Sensibilisation au phishing ',
+      content: "Le phishing (ou hameçonnage en français) est la cyberattaque la plus utilisée par les acteurs malveillants. Sa simplicité technique et son bas coût offre une arme de choix aux cybercriminels. Il faut savoir que 90 % des cyberattaques proviennent d'une attaque de phishing ! C'est pourquoi il est important de ne pas négliger sa messagerie professionnelle comme personnelle. Nous mettons en plus des mini-ateliers pour inclure les collaborateurs et leur permettre de pratiquer dans un environnement idéal.",
       image: '/images/modules/network.jpg',
       status: 'Disponible'
     },
     {
       id: 2,
-      title: 'Applications',
-      description: 'Sécurité des applications',
-      content: 'Maîtrisez la sécurisation des applications web et mobiles, identifiez les vulnérabilités courantes.',
+      title: 'OSINT',
+      description: '(Open Source Intelligence)',
+      content: "L'OSINT (Open Source Intelligence) est une pratique connue en cybersécurité. Elle consiste à chercher des informations disponibles publiquement sur internet. Certaines entreprises ou recruteurs font appellent à des sociétés spécialisées dans cette pratique pour trouver des informations spécifiques. Dans ce module nous abordons le danger des réseaux sociaux et souhaitons montrer que toutes informations mise en ligne peut -être utilisée dans un but malveillant. Une mise en pratique des personnes sensibilisés sur un cas fictif, pour leur faire prendre conscience de la quantité d'informations personnelles et les liens qu'il est possible de faire à partir d'un simple nom, d'une adresse mail ou même d'une photo.",
       image: '/images/modules/apps.jpg',
-      status: 'Bientôt'
+      status: 'Disponible'
     },
-    {
+    /*{
       id: 3,
-      title: 'Données',
+      title: 'Conférence',
       description: 'Protection des données',
-      content: 'Protégez vos données sensibles, appliquez le chiffrement et gérez les sauvegardes de manière sécurisée.',
+      content: 'LearnCyber a animé plusieurs conférences sur des sujets de cybersécurité.',
       image: '/images/modules/data.jpg',
       status: 'Bientôt'
-    }
+    }*/
   ];
 
   return (

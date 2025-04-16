@@ -8,7 +8,7 @@ const Agency = () => {
         <div className="agency__text">
           <h2 className="agency__title">LearnCyber</h2>
           <p className="agency__description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          LearnCyber est à l'origine un projet étudiant lancé par 3 étudiants débutants en cybersécurité. Notre souhait était de lancer un média complet et 100 % françaisde la cybersécurité. Aujourd'hui LearnCyber c'est une association à but non lucrative qui vise à sensibiliser aux enjeux de la cybersécurité, en intervenant principalement en milieu scolaire. Nous sommes persuadés que sensibiliser les jeunes d'aujourd'hui, permettra de rendre le monde de demain plus sûr. 
           </p>
           <a href="#process" className="agency__cta">Découvrir notre process</a>
         </div>

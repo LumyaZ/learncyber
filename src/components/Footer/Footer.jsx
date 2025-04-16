@@ -28,13 +28,6 @@ const Footer = () => {
                         <li><a href="#contact" >Contact</a></li>
                     </ul>
                 </div>
-                <div className="footer__contact">
-                    <ul>
-                        <li>Adresse: 123 Rue Exemple, Ville, Pays</li>
-                        <li>Téléphone: +123 456 7890</li>
-                        <li>Email: contact@exemple.com</li>
-                    </ul>
-                </div>
                 <div className="footer__legal">
                     <ul>
                         <li><a href="#">Mentions légales</a></li>

@@ -1,212 +1,110 @@
 @import '../styles/variables';
 
-.team-component {
-  margin: 0 auto;
-  padding: 20px;
+.team {
+  padding: 4rem 2rem;
   background-color: $secondary-color;
-  
+
   &__title {
-    color: white;
+    font-family: $font-primary;
     font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 10px;
+    color: $primary-color;
     text-transform: uppercase;
     letter-spacing: 2px;
-  }
-  
-  &__subtitle {
     text-align: center;
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 50px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 3rem;
   }
-  
-  &__slider {
-    position: relative;
-    min-height: 600px;
 
-    .swiper-slide {
-      height: auto;
-      padding: 40px 0;
-    }
+  &__slider {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
-  
+
   &__member {
     background: white;
-    border-radius: 12px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 auto;
-    width: 90%;
-    position: relative;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    
-    &.top {
-      transform: translateY(-30px);
-    }
-    
-    &.bottom {
-      transform: translateY(30px);
-    }
-    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
     &:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
     }
   }
-  
+
   &__image {
     width: 100%;
-    height: 70%;
-    background-color: $primary-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    height: 300px;
     overflow: hidden;
-  }
-  
-  &__placeholder {
-    width: 120px;
-    height: 120px;
-    background-color: white;
-    border-radius: 50%;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    font-weight: 700;
-    color: $primary-color;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
   }
-  
+
   &__info {
-    padding: 20px;
+    padding: 1.5rem;
     text-align: center;
-    height: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
-  
+
   &__name {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-family: $font-primary;
+    font-size: 1.3rem;
     color: $primary-color;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
   }
-  
+
   &__role {
-    font-size: 1.1rem;
+    font-family: $font-secondary;
+    font-size: 1rem;
     color: $text-color;
-    margin: 0;
-    line-height: 1.4;
   }
-  
+
   // Styles pour les boutons de navigation Swiper
   .swiper-button-next,
   .swiper-button-prev {
     color: $primary-color;
     background: white;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
-    
-    &:after {
-      font-size: 1.5rem;
-    }
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    &:hover {
-      background: darken(white, 5%);
+    &:after {
+      font-size: 1.2rem;
     }
   }
-  
+
   // Styles pour la pagination Swiper
   .swiper-pagination-bullet {
-    background:  $primary-color;
+    background: $primary-color;
     opacity: 0.5;
-    width: 12px;
-    height: 12px;
-    
+
     &-active {
       opacity: 1;
     }
   }
-  
-  // Responsive styles
-  @media (max-width: 1200px) {
-    &__member {
-      height: 420px;
-      
-      &.top {
-        transform: translateY(-20px);
-      }
-      
-      &.bottom {
-        transform: translateY(20px);
-      }
-    }
-  }
-  
-  @media (max-width: 768px) {
-    padding: 40px 15px;
-    
+
+  @media (max-width: $mobile) {
+    padding: 3rem 1rem;
+
     &__title {
       font-size: 2rem;
+      margin-bottom: 2rem;
     }
-    
-    &__subtitle {
-      font-size: 1rem;
-      margin-bottom: 30px;
-    }
-    
-    &__slider {
-      padding: 60px 20px;
-      min-height: 500px;
-    }
-    
-    &__member {
-      height: 380px;
-      
-      &.top {
-        transform: translateY(-15px);
-      }
-      
-      &.bottom {
-        transform: translateY(15px);
-      }
-    }
-    
-    &__name {
-      font-size: 1.3rem;
-    }
-    
-    &__role {
-      font-size: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    &__slider {
-      padding: 40px 10px;
-      min-height: 400px;
-    }
-    
-    &__member {
-      height: 350px;
-      
-      &.top,
-      &.bottom {
-        transform: none;
-      }
+
+    &__image {
+      height: 250px;
     }
   }
 } 

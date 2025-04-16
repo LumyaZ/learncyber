@@ -81,10 +81,13 @@ const Contact = () => {
           <h2 className="contact__title">Contact</h2>
           <div className="contact__text">
             <p>
-              mettre un text
+              contact@learncyber.fr
             </p>
             <p>
-              mettre un text
+              ascandella@learncyber.fr
+            </p>
+            <p>
+              Téléphone : “prochainement” 
             </p>
           </div>
         </div>

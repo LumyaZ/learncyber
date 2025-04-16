@@ -6,75 +6,58 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Team.scss';
 
+import anthonyImage from '../../assets/images/team/anthony_scandella.jpg';
+import thomasImage from '../../assets/images/team/thomas_thellier.jpg';
+import adrienImage from '../../assets/images/team/adrien_moisset.jpg';
+import quentinImage from '../../assets/images/team/quentin_fanchon.jpg';
+import alexisImage from '../../assets/images/team/alexis_neri.jpg';
+
+
 const Team = () => {
   const teamMembers = [
     {
       id: 1,
-      name: 'Aminata',
-      role: 'Graphiste et chef de projet',
+      name: 'Anthony Scandella',
+      role: 'Chef de projet et Président de LearnCyber Consultant et Sensibilisateur',
+      image: anthonyImage,
       objectPosition: 'center 0%'
     },
     {
       id: 2,
-      name: 'Alexis',
-      role: 'Commercial'
+      name: 'Thomas Thellier',
+      image: thomasImage,
+      role: 'Trésorier de LearnCyber Consultant et Sensibilisateur  '
     },
     {
       id: 3,
-      name: 'Antoine',
-      role: 'Commercial',
+      name: 'Quentin Fanchon',
+      image: quentinImage,
+      role: 'Secrétaire de LearnCyber Consultant et Sensibilisateur  ',
       objectPosition: 'center 30%'
     },
     {
       id: 4,
-      name: 'Axel',
-      role: 'Responsable audiovisuel',
+      name: 'Alexis Neri',
+      image: alexisImage,
+      role: 'Secrétaire suppléant Consultant et Sensibilisateur',
       objectPosition: 'center 30%'
     },
     {
       id: 5,
-      name: 'Jean françois',
-      role: 'Community manager'
+      name: 'Adrien Moisset',
+      image: adrienImage,
+      role: 'Consultant et Sensibilisateur et responsable réseaux / communications '
     },
-    {
-      id: 6,
-      name: 'Jules',
-      role: 'Community manager'
-    },
-    {
-      id: 7,
-      name: 'Marie',
-      role: 'Designer'
-    },
-    {
-      id: 8,
-      name: 'Pierre',
-      role: 'Développeur'
-    },
-    {
-      id: 9,
-      name: 'Sophie',
-      role: 'Marketing'
-    },
-    {
-      id: 10,
-      name: 'Yasser',
-      role: 'Connard'
-    }
   ];
 
   return (
-    <section id="team" className="team-component">
-      <h2 className="team-component__title">Notre Team</h2>
-      <p className="team-component__subtitle">
-        Découvrez les talents qui composent notre équipe passionnée.
-      </p>
-      
-      <div className="team-component__slider">
+    <section id="team" className="team">
+      <h2 className="team__title">Notre Team</h2>
+      <div className="team__slider">
         <Swiper
           modules={[Navigation, Pagination]}
           spaceBetween={30}
-          slidesPerView={4}
+          slidesPerView={3}
           navigation
           pagination={{ clickable: true }}
           breakpoints={{
@@ -87,22 +70,21 @@ const Team = () => {
             1024: {
               slidesPerView: 3,
             },
-            1200: {
-              slidesPerView: 4,
-            }
           }}
         >
-          {teamMembers.map((member, index) => (
+          {teamMembers.map((member) => (
             <SwiperSlide key={member.id}>
-              <div className={`team-component__member ${index % 2 === 0 ? 'top' : 'bottom'}`}>
-                <div className="team-component__image">
-                  <div className="team-component__placeholder">
-                    {member.name.charAt(0)}
-                  </div>
+              <div className="team__member">
+                <div className="team__image">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    style={{ objectPosition: member.objectPosition || 'center' }}
+                  />
                 </div>
-                <div className="team-component__info">
-                  <h3 className="team-component__name">{member.name}</h3>
-                  <p className="team-component__role">{member.role}</p>
+                <div className="team__info">
+                  <h3 className="team__name">{member.name}</h3>
+                  <p className="team__role">{member.role}</p>
                 </div>
               </div>
             </SwiperSlide>
