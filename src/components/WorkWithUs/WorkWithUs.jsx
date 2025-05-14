@@ -9,18 +9,18 @@ const WorkWithUs = () => {
   const testimonials = [
     {
       id: 1,
-      name: 'Olivier Coulon',
-      quote: 'Notre collaboration avec LearnCyber a transformé notre approche de la sécurité. Leurs formations sur mesure ont permis à nos équipes de développer des compétences essentielles pour protéger notre infrastructure.',
+      name: 'Lorem Ipsum',
+      quote: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     },
     {
       id: 2,
-      name: 'Youssef Younes',
-      quote: 'La qualité des formations et l\'expertise des formateurs ont dépassé nos attentes. Nous avons pu renforcer significativement notre posture de sécurité grâce à ce partenariat.',
+      name: 'Lorem Ipsum',
+      quote: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     },
     {
       id: 3,
-      name: 'Lille - Ynov Campus',
-      quote: 'Un partenaire de confiance qui comprend parfaitement nos besoins en matière de cybersécurité. Leurs solutions personnalisées ont fait toute la différence dans notre stratégie de sécurité.',
+      name: 'Lorem Ipsum',
+      quote: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
     }
   ];
 

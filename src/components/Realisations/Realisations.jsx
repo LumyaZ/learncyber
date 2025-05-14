@@ -18,7 +18,6 @@ const Realisations = () => {
 
   const handleClosePanel = () => {
     setIsPanelOpen(false);
-    // Optionnel: délai pour l'animation de fermeture avant de vider les données
     setTimeout(() => setSelectedProject(null), 300);
   };
 
@@ -26,52 +25,52 @@ const Realisations = () => {
     '2023-2024': [
       {
         id: 1,
-        title: 'Plateforme de formation en cybersécurité',
-        description: 'Développement d\'une plateforme interactive pour l\'apprentissage des concepts de base en cybersécurité, incluant des modules interactifs, des quiz et un suivi de progression personnalisé.',
+        title: 'Sensibilisation des élèves du lycée la salle Lille',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s...',
         images: ['/images/realisations/projet1_1.jpg', '/images/realisations/projet1_2.jpg', '/images/realisations/projet1_3.jpg'],
-        technologies: ['React', 'Node.js', 'MongoDB', 'SCSS'],
+        technologies: [''],
         link: '#'
       },
       {
         id: 2,
-        title: 'Application de simulation d\'attaques',
-        description: 'Création d\'un environnement virtuel permettant de simuler différents types d\'attaques (Phishing, DDoS, Injection SQL) dans un cadre sécurisé et éducatif.',
+        title: 'Sensibilisation du corps enseignant',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
         images: ['/images/realisations/projet2_1.jpg', '/images/realisations/projet2_2.jpg'],
-        technologies: ['Python', 'Docker', 'Kubernetes', 'Flask'],
+        technologies: [''],
         link: '#'
       },
       {
         id: 3,
-        title: 'Audit de sécurité pour entreprises',
-        description: 'Réalisation d\'audits complets (tests d\'intrusion, analyse de vulnérabilités) et mise en place de solutions de sécurité pour plusieurs entreprises du secteur financier.',
+        title: 'Sensibilisation du personnel administratif',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
         images: ['/images/realisations/projet3_1.jpg', '/images/realisations/projet3_2.jpg', '/images/realisations/projet3_3.jpg'],
-        technologies: ['Kali Linux', 'Wireshark', 'Metasploit', 'Nmap'],
+        technologies: [''],
         link: '#'
       }
     ],
     '2024-2025': [
       {
         id: 4,
-        title: 'Système de détection d\'intrusions IA',
-        description: 'Conception et déploiement d\'un système intelligent de détection d\'intrusions basé sur l\'IA pour anticiper les attaques zero-day et les menaces persistantes avancées (APT).',
+        title: 'Sensibilisation spécifique dans une formation OVT au Lycée Vertes Feuilles',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
         images: ['/images/realisations/projet4_1.jpg', '/images/realisations/projet4_2.jpg'],
-        technologies: ['Python', 'TensorFlow', 'AWS SageMaker', 'Kibana'],
+        technologies: [''],
         link: '#'
       },
       {
         id: 5,
-        title: 'Formation avancée en cryptographie',
-        description: 'Développement d\'un module interactif d\'apprentissage des techniques modernes de cryptographie (post-quantique, homomorphe) pour professionnels de la sécurité.',
+        title: 'Conférence sur les enjeux de cybersécurité dans le milieu de l\'Optique à l\'EOL',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
         images: ['/images/realisations/projet5_1.jpg', '/images/realisations/projet5_2.jpg', '/images/realisations/projet5_3.jpg'],
-        technologies: ['React', 'Three.js', 'WebAssembly', 'Rust'],
+        technologies: [''],
         link: '#'
       },
       {
         id: 6,
-        title: 'Sécurisation d\'infrastructures IoT',
-        description: 'Projet de recherche et implémentation de protocoles de sécurité légers et robustes pour objets connectés en environnement industriel critique (SCADA).',
+        title: 'Sensibilisation des étudiants à Lille Ynov Campus',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
         images: ['/images/realisations/projet6_1.jpg', '/images/realisations/projet6_2.jpg'],
-        technologies: ['Rust', 'Embedded C', 'MQTT', 'CoAP'],
+        technologies: [''],
         link: '#'
       }
     ]
@@ -141,7 +140,11 @@ const Realisations = () => {
               >
                 {selectedProject.images.map((img, index) => (
                   <SwiperSlide key={index}>
-                    <img src={img} alt={`${selectedProject.title} - Image ${index + 1}`} className="realisations__panel-img"/>
+                    <img 
+                      src={img} 
+                      alt={`${selectedProject.title} ${index + 1}`} 
+                      className="realisations__panel-img" 
+                    />
                   </SwiperSlide>
                 ))}
               </Swiper>
@@ -155,7 +158,9 @@ const Realisations = () => {
                   <span key={index} className="realisations__tech-tag">{tech}</span>
                 ))}
               </div>
-              <a href={selectedProject.link} className="realisations__panel-link" target="_blank" rel="noopener noreferrer">Voir le projet (si applicable)</a>
+              <a href={selectedProject.link} className="realisations__panel-link" target="_blank" rel="noopener noreferrer">
+                Voir le projet (si applicable)
+              </a>
             </div>
           </>
         )}
@@ -164,4 +169,4 @@ const Realisations = () => {
   );
 };
 
-export default Realisations; 
+export default Realisations;

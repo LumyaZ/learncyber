@@ -6,10 +6,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Team.scss';
 
-import anthonyImage from '../../assets/images/team/anthony_scandella.jpg';
-import thomasImage from '../../assets/images/team/thomas_thellier.jpg';
+import anthonyImage from '../../assets/images/team/antho.png';
+import thomasImage from '../../assets/images/team/levieux.png';
 import adrienImage from '../../assets/images/team/adrien_moisset.jpg';
-import quentinImage from '../../assets/images/team/quentin_fanchon.jpg';
+import quentinImage from '../../assets/images/team/quentin.png';
 import alexisImage from '../../assets/images/team/alexis_neri.jpg';
 
 
@@ -20,20 +20,21 @@ const Team = () => {
       name: 'Anthony Scandella',
       role: 'Chef de projet et Président de LearnCyber Consultant et Sensibilisateur',
       image: anthonyImage,
-      objectPosition: 'center 0%'
+      objectPosition: 'center 10%'
     },
     {
       id: 2,
       name: 'Thomas Thellier',
       image: thomasImage,
-      role: 'Trésorier de LearnCyber Consultant et Sensibilisateur  '
+      role: 'Trésorier de LearnCyber Consultant et Sensibilisateur  ',
+      objectPosition: 'center 20%'
     },
     {
       id: 3,
       name: 'Quentin Fanchon',
       image: quentinImage,
       role: 'Secrétaire de LearnCyber Consultant et Sensibilisateur  ',
-      objectPosition: 'center 30%'
+      objectPosition: 'center 20%'
     },
     {
       id: 4,

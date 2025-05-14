@@ -5,49 +5,50 @@ const Testimonials = () => {
   const companies = [
     {
       id: 1,
-      name: 'TechCorp',
-      logo: 'https://via.placeholder.com/150',
-      hasLogo: true
+      name: 'OVT Vertes feuilles',
+      //logo: 'https://via.placeholder.com/150',
+      hasLogo: false
     },
     {
       id: 2,
-      name: 'SecureBank',
-      logo: 'https://via.placeholder.com/150',
-      hasLogo: true
+      name: 'EOL',
+      //logo: 'https://via.placeholder.com/150',
+      hasLogo: false
     },
     {
       id: 3,
-      name: 'DataSecure',
-      logo: 'https://via.placeholder.com/150',
-      hasLogo: true
+      name: 'Lille - Ynov Campus',
+      //logo: 'https://via.placeholder.com/150',
+      hasLogo: false
     },
     {
       id: 4,
-      name: 'CyberTech Solutions',
+      name: 'Lyçée La Salle',
       hasLogo: false
     },
     {
       id: 5,
-      name: 'NetGuard',
-      logo: 'https://via.placeholder.com/150',
-      hasLogo: true
+      name: 'OVT Vertes feuilles',
+      //logo: 'https://via.placeholder.com/150',
+      hasLogo: false
     },
     {
       id: 6,
-      name: 'Digital Shield',
+      name: 'EOL',
+      //logo: 'https://via.placeholder.com/150',
       hasLogo: false
     },
     {
       id: 7,
-      name: 'SecureNet',
-      logo: 'https://via.placeholder.com/150',
-      hasLogo: true
+      name: 'Lille - Ynov Campus',
+      //logo: 'https://via.placeholder.com/150',
+      hasLogo: false
     },
     {
       id: 8,
-      name: 'TechGuard',
+      name: 'Lyçée La Salle',
       hasLogo: false
-    }
+    },
   ];
 
   return (
